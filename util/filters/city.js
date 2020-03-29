@@ -17,7 +17,7 @@ export const addCities = (graph, patients) => {
   let stateCitiesMap = {};
 
   for (let patientId in patients) {
-    let city = getCityDistrictOrState(patients, patientId)
+    let city = getCityDistrictOrState(patients, patientId);
     if (!states[hash(patients[patientId].state ? patients[patientId].state : patients[patientId].state = "No State")]) {
       states[hash(patients[patientId].state)] = patients[patientId].state
       if (!stateCitiesMap[hash(patients[patientId].state)]) {
